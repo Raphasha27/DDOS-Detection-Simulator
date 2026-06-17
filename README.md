@@ -27,6 +27,20 @@ Educational DDoS detection simulation platform for SOC analysts and security stu
 - **Alert Generation** — Severity-based alerting with MITRE ATT&CK mapping
 - **Historical Analysis** — PCAP export and post-event investigation
 
+
+## Architecture
+
+```mermaid
+graph LR
+    USER[User] --> API[FastAPI]
+    API --> PROC[Processor]
+    PROC --> DB[(Database)]
+    API --> AUTH[Auth Layer]
+    PROC --> AI[AI/ML Engine]
+```
+
+Microservices-based architecture with API Gateway, authentication layer, PostgreSQL persistence, and event-driven communication.
+
 ## Quick Start
 
 ```bash
